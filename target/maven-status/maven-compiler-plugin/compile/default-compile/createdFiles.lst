@@ -1,0 +1,6 @@
+com\vermisse\boot\Database.class
+com\vermisse\boot\web\DemoAction.class
+com\vermisse\boot\Application.class
+com\vermisse\boot\task\QuartzDemo.class
+com\vermisse\boot\dao\DemoMapper.class
+com\vermisse\boot\service\DemoService.class

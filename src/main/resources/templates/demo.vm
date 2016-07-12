@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset="utf-8" />
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Num</th>
+								<th>Host</th>
+								<th>User</th>
+								<th>Password</th>
+							</tr>
+						</thead>
+						<tbody>
+							#foreach($item in $!user)
+							<tr class="info">
+								<td>$!velocityCount</td>
+								<td>$!item.Host</td>
+								<td>$!item.User</td>
+								<td>$!item.Password</td>
+							</tr>
+							#end
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
