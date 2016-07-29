@@ -1,9 +1,9 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>首页</title>
 		<meta charset="utf-8" />
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet" />
 	</head>
 	<body>
 		<div class="container">
@@ -19,14 +19,12 @@
 							</tr>
 						</thead>
 						<tbody>
-							#foreach($item in $!user)
-							<tr class="info">
-								<td>$!velocityCount</td>
-								<td>$!item.Host</td>
-								<td>$!item.User</td>
-								<td>$!item.Password</td>
+							<tr class="info" th:each="item,stat : ${user}">
+								<td th:text="${stat.count}">1</td>
+								<td th:text="${item.Host}">Host</td>
+								<td th:text="${item.User}">User</td>
+								<td th:text="${item.Password}">Password</td>
 							</tr>
-							#end
 						</tbody>
 					</table>
 				</div>
